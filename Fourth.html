@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Booking</h3>
+<form method="POST">
+<input type="hidden" name= "ip" value="1.1.1.1"/>
+<label>Journey Date</label>
+<input type="date" name="journey date" min="2020-04-20" max="2021-12-30" required/>
+<br>
+<label>PickUp Time</label>
+<input type="time" name="pickuptime" required/>
+<br>
+Gst <input type="number" name="gst" value="10" readonly/>
+<br>
+Gender <input type="radio" name="gender" value="M" />Male
+<input type="radio" name="gender" value="F" />Female
+<br>
+<input type="checkbox" name="seniorcitizen" id="seniorcitizen"/> Senior Citizen 
+<br>
+<br>
+Successfully Booked!
+<h3>Instruction</h3>
+<ul>
+<li>Must wear Mask</li>
+<li>Keep the cab Clean</li>
+</ul>
+<ol>
+<li>Must wear Mask</li>
+<li>Keep the cab Clean</li>
+</ol>
+</form>
+</body>
+</html>
