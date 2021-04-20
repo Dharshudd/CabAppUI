@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <header>CABAPP</header>
+    <main>
+
+        <h1>Task1: Login</h1>
+        <br/>
+        <form onsubmit="Login()">
+
+            <label for="name"><b>Name </b></label>
+            <input type="text" placeholder="Enter your name" name="name" id="name" required autofocus/>
+            <br/>
+            <label>Mobile No.</label>
+            <input type="number" placeholder="Enter your mobile number" id="mobileNo" required/>
+            <br>
+            <label> Password</label>
+            <input type="password" id="password" pattern=".{8,}" title="Eight or more characters" required/>
+            <br>
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+            <button type="button" onclick="hello()">click me</button>
+    </main>
+    <br><br>
+    <footer>Copyright Reserved!</footer>
+    </form>
+
+    <script>
+        function Login() {
+            //Username
+            event.preventDefault(); //Prevent default behaviour
+            alert("Login Button Clicked");
+            let username = document.querySelector("#name").value; //gets the user input and store it in a variable
+            alert("Your Name is: " + username); //gives alert message on clicking the button
+            //Mobile numb
+            let Mobile = document.querySelector("#mobileNo").value;
+            let Password = document.querySelector("#password").value;
+            if (Mobile.length == 10) {
+                alert("Your mobile no is: " + Mobile);
+            } else {
+                alert("Please enter valid Mobile number");
+                exit(0);
+            }
+            //password
+            // if (Password.length >= 8) {
+            //     alert("Successfully logged in!");
+            // } else {
+            //     alert("Please enter valid password");
+            //     exit(0);
+            // }
+        }
+
+        function hello() {
+            alert("Hello");
+        }
+
+        // function passwordMthd() {
+        //     event.preventDefault();
+        //     alert("Login button clicked");
+        //     let Password = document.querySelector("#password").value;
+        //     if (Password.length >= 8) {
+        //         alert("Valid Password || Successfully logged in!");
+        //     } else {
+        //         alert("Enter valid password");
+        //     }
+        // }
+    </script>
+
+
+</body>
+
+</html>
